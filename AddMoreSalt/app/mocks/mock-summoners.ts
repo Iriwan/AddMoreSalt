@@ -1,4 +1,4 @@
-import { Summoner } from './summoner';
+import { Summoner } from '../summoner';
 export const SUMMONERS: Summoner[] = [
                                { id: 11, name: 'Mr. Nice' },
                                { id: 12, name: 'Narco' },

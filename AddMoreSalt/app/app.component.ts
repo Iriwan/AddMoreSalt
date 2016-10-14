@@ -1,8 +1,11 @@
     import { Component,OnInit} from '@angular/core';
     import { Champion } from './champion';
     import { Summoner } from './summoner';
+    import { Match } from './match';
     import { ChampionService } from './champion.service';
     import { SummonerService } from './summoner.service';
+    import { MatchService } from './match.service';
+    
     
    
    
@@ -28,11 +31,18 @@
           <span class="badge">{{champion.id}}</span> 
         </li>
       </ul>
-      
+      <h2>Match</h2>
+      <ul class="matches">
+        <li *ngFor="let match of matches"
+          [class.selected]="match === selectedMatch"
+          (click)="onSelect(match)">
+          <span class="badge">{{match.matchId}}</span> 
+        </li>
+      </ul>
       
       
     `,   
-    providers: [SummonerService, ChampionService]
+    providers: [SummonerService, ChampionService, MatchService]
     })
     
     
@@ -40,16 +50,21 @@
     title = 'Add More Salt';
     summoners: Summoner[];
     champions: Champion[];
-    constructor(private championService: ChampionService, private summonerService: SummonerService) { }
+    matches: Match[];
+    constructor(private championService: ChampionService, private summonerService: SummonerService, private matchService: MatchService) { }
     getChampions(): void {
         this.championService.getChampions().then(champions => this.champions = champions);
       }
     getSummoners(): void {
         this.summonerService.getSummoners().then(summoners => this.summoners = summoners);
       }
+    getMatches(): void {
+        this.matchService.getMatches().then(matches => this.matches = matches);
+      }
     ngOnInit(): void {
         this.getSummoners();
         this.getChampions();
+        this.getMatches();
       }
     
   	selectedSummoner: Summoner;

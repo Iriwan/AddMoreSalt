@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Summoner } from './summoner';
-import { SUMMONERS } from './mock-summoners';
+import { SUMMONERS } from './mocks/mock-summoners';
 
 @Injectable()
 export class SummonerService {
