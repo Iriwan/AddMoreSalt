@@ -1,5 +1,5 @@
     import { Component,OnInit} from '@angular/core';
-    import { Match } from './match';
+    import { Match } from './model/match';
     import { MatchService } from './match.service';
 
     @Component({

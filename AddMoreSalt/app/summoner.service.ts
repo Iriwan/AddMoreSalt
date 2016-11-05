@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Summoner } from './summoner';
+import { Summoner } from './model/summoner';
 import { SUMMONERS } from './mocks/mock-summoners';
 
 @Injectable()

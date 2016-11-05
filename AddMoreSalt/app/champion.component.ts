@@ -1,5 +1,5 @@
     import { Component,OnInit} from '@angular/core';
-    import { Champion } from './champion';
+    import { Champion } from './model/champion';
     import { ChampionService } from './champion.service';
 
     @Component({

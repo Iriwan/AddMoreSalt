@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Champion } from './champion';
+import { Champion } from './model/champion';
 import { CHAMPIONS } from './mocks/mock-champions';
 
 @Injectable()

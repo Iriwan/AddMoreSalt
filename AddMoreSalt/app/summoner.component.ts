@@ -1,5 +1,5 @@
     import { Component,OnInit} from '@angular/core';
-    import { Summoner } from './summoner';    
+    import { Summoner } from './model/summoner';    
     import { SummonerService } from './summoner.service';
 
     @Component({

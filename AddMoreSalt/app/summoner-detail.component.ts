@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Summoner } from './summoner';
+import { Summoner } from './model/summoner';
 
 @Component({
 	  selector: 'my-summoner-detail',
