@@ -1,0 +1,36 @@
+      <h2>LIVE</h2> 
+      <h2>{{currentgame?.gameMode}}</h2>
+      BannedChampions:
+    <ul>
+       <li *ngFor="let bc of currentgame?.participants">
+        {{ bc?.teamId }}
+        {{ bc?.championId }}
+      </li>
+    </ul>
+   
+   
+    <ul>
+    	<li *ngFor="let pc of currentgame?.participants">
+     <span [ngSwitch]="pc?.teamId">
+      TEAM 1:
+     <span *ngSwitchCase="100">
+    	{{ pc?.championId }}
+    	{{ pc?.summonerName }}
+    	</span>
+      TEAM 2:
+     <span *ngSwitchCase="200">
+    	{{ pc?.championId }}
+    	{{ pc?.summonerName }}
+    	</span>
+    	
+     </span>
+     </li>
+   </ul>
+     TEAM 2:
+    <ul>
+    	<li *ngFor="let pc of currentgame?.participants">
+    	<div>
+    	{{ pc?.championId }}
+    	{{ pc?.summonerName }}</div>
+     </li>
+   </ul>
